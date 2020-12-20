@@ -16,6 +16,10 @@
 
 > Lollipop based on G2Plot v2
 
+## DEMO
+
+[Live DEMO](https://mrsmallliu.github.io/G2Plot-Lollipop/)
+
 ## Install
 
 ```sh
