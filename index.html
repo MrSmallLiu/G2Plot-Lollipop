@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>G2Plot-Lollipop</title>
+</head>
+<style>
+    #container {
+        width: 600px;
+        height: 600px;
+    }
+</style>
+
+<body>
+    <h1 style="padding:40px;">
+        <a href="https://github.com/MrSmallLiu/G2Plot-Lollipop" target="_blank">G2Plot-Lollipop</a>
+        <span>|</span>
+        <a href="https://github.com/MrSmallLiu" target="_blank">Author: MrSmallLiu</a>
+    </h1>
+    <div style="width: 100%; height: 100%; display: flex;align-items: center; justify-content: center;">
+        <div id="container"></div>
+    </div>
+    <script src="https://unpkg.com/@antv/g2plot"></script>
+    <script src="https://unpkg.com/g2plot-lollipop"></script>
+</body>
+<script>
+
+    const data = [
+        {
+            type: '家具家电',
+            sales: 38,
+        },
+        {
+            type: '粮油副食',
+            sales: 52,
+        },
+        {
+            type: '生鲜水果',
+            sales: 61,
+        },
+        {
+            type: '美容洗护',
+            sales: 145,
+        },
+        {
+            type: '母婴用品',
+            sales: 48,
+        },
+        {
+            type: '进口食品',
+            sales: 38,
+        },
+        {
+            type: '食品饮料',
+            sales: 38,
+        },
+        {
+            type: '家庭清洁',
+            sales: 38,
+        },
+    ];
+    const lollipop = new Lollipop.Lollipop('container', {
+        data,
+        xField: 'type',
+        yField: 'sales',
+        radiusRatio: 0.4
+    })
+    lollipop.render()
+</script>
+
+</html>

@@ -48,7 +48,6 @@ export function registerShape(): void {
       group.addShape('circle', {
         attrs: {
           x: points[4].x,
-          // 让圆的最上边代表数据值，防止99.7这种圆截断一部分
           y: points[4].y,
           r,
           ...cfg.defaultStyle,
