@@ -9,8 +9,6 @@ module.exports = {
     port: 9000
   },
   mode: 'development',
-  // 1、source-map：产生文件，产生行列
-  // externals: '@antv/g2plot',
   devtool: 'source-map',
   entry: path.resolve(__dirname, '../example/index.ts'),
   // target: 'web',

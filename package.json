@@ -1,14 +1,17 @@
 {
   "name": "g2plot-lollipop",
-  "version": "0.1.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Lollipop based on G2Plot v2",
   "author": "MrSmallLiu",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["g2plot", "g2plot-lollipop", "lollipop"],
   "homepage": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MrSmallLiu/G2Plot-Lollipop.git"
+  },
+  "bugs":{
+    "url":"https://github.com/MrSmallLiu/G2Plot-Lollipop/issues"
   },
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -28,7 +31,8 @@
     "lib:esm": "tsc -p tsconfig.json --target ES5 --module ESNext --outDir esm",
     "dist": "webpack --config build/webpack.config.js"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "@antv/g2plot": "^2.3.2",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
