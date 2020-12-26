@@ -63,13 +63,13 @@ export function scale(params: Params<LollipopOptions>): Params<LollipopOptions> 
  */
 function geometry(params: Params<LollipopOptions>) {
   const { chart, options } = params;
-  const { radiusRatio, columnStyle, color } = options;
+  const { diameterRatio, columnStyle, color } = options;
   chart.data(options.data);
   interval({
     chart,
     options: {
       ...options,
-      widthRatio: radiusRatio,
+      widthRatio: diameterRatio,
       interval: {
         style: columnStyle,
         shape: 'interval-lollipop',

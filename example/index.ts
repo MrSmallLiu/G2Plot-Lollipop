@@ -14,7 +14,7 @@ import {Lollipop} from '../src'
   },
   {
     type: '美容洗护',
-    sales: 145,
+    sales: 121,
   },
   {
     type: '母婴用品',
@@ -34,9 +34,15 @@ import {Lollipop} from '../src'
   },
 ];
   const lollipop =  new Lollipop('container',  {
+    autoFit: true,
       data,
       xField:'type',
       yField: 'sales',
-      radiusRatio: 0.4
+      diameterRatio: 0.4,
+      color: 'red',
+      columnStyle:{
+        fillOpacity:0.8
+      },
+      appendPadding:[10,0]
   })
   lollipop.render()

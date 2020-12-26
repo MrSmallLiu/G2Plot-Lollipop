@@ -72,6 +72,10 @@ const lollipop =  new Lollipop('container',  {
 })
 lollipop.render()
 ```
+## API
+- diameterRatio(_number_) 圆直径占比 (0,1)
+  
+- 其余API与[G2Plot柱状图](https://antv-g2plot.gitee.io/zh/examples/column/basic#basic)配置保持一致
 
 ## Author
 
