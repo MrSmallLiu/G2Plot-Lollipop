@@ -7,5 +7,5 @@ export const defaultOptions = {
     showMarkers: false,
     offset: 20,
   },
-  interactions: [{ type: 'active-region' }],
+  interactions: [{ type: 'element-active' }],
 };
