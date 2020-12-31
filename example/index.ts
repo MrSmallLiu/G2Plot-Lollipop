@@ -39,10 +39,8 @@ import {Lollipop} from '../src'
       xField:'type',
       yField: 'sales',
       diameterRatio: 0.4,
-      color: 'red',
       columnStyle:{
         fillOpacity:0.8
-      },
-      appendPadding:[10,0]
+      }
   })
   lollipop.render()

@@ -61,7 +61,7 @@ export function scale(params: Params<LollipopOptions>): Params<LollipopOptions> 
  * 图形通道
  * @param params
  */
-function geometry(params: Params<LollipopOptions>) {
+function geometry(params: Params<LollipopOptions>): Params<LollipopOptions> {
   const { chart, options } = params;
   const { diameterRatio, columnStyle, color } = options;
   chart.data(options.data);
@@ -80,6 +80,34 @@ function geometry(params: Params<LollipopOptions>) {
   return params;
 }
 
+/**
+ * tooltip通道，后续可以考虑使用g2plot暴露的tooltip
+ * @param params
+ */
+function tooltip(params: Params<LollipopOptions>): Params<LollipopOptions> {
+  const { chart, options } = params;
+  const { tooltip } = options;
+  chart.tooltip(tooltip);
+  return params;
+}
+
+/**
+ * interaction通道，后续可以考虑使用g2plot暴露的interaction
+ * @param params
+ */
+function interaction(params: Params<LollipopOptions>): Params<LollipopOptions> {
+  const { chart, options } = params;
+  const { interactions } = options;
+  for (const i of interactions) {
+    if (i.enable === false) {
+      chart.removeInteraction(i.type);
+    } else {
+      chart.interaction(i.type, i.cfg || {});
+    }
+  }
+  return params;
+}
+
 export function adaptor(params: Params<LollipopOptions>): Params<LollipopOptions> {
-  return flow(geometry, axis, legend, scale)(params);
+  return flow(geometry, axis, legend, tooltip, interaction, scale)(params);
 }
